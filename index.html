@@ -1,16 +1,67 @@
 <!DOCTYPE html>
 <html>
- <head>
-        <link rel="stylesheet" href="/style.css">
-</head>
- <body>
-    <p>
-        <button type="button" class="collapsible">A robot may not injure a human being or, through inaction, allow a human being to come to harm</button>
-        <div class="content">
-          <p>Few things are as painful as getting a motor stuck in your hair. One day, as I was working on a robot for the First Tech Challenge robotics competition, my long blonde hair dangled too close to the motor, and as the motor spun, it caught my hair quickly and became a tangled mess. One of the boys on the team scoffed at me, muttering something about how girls shouldn’t work on robots. I tried to wear my hair in a ponytail after that.
-        </p>
-        </div>
-    </p> 
-</body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>This Essay Will Self Destruction</h2>
+
+<p>A robot may not injure a human being or, through inaction, allow a human being to come to harm</p>
+<button type="button" class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>Few things are as painful as getting a motor stuck in your hair. One day, as I was working on a robot for the First Tech Challenge robotics competition, my long blonde hair dangled too close to the motor, and as the motor spun, it caught my hair quickly and became a tangled mess. One of the boys on the team scoffed at me, muttering something about how girls shouldn’t work on robots. I tried to wear my hair in a ponytail after that.</p>
+</div>
+
+<p>A robot must obey the orders given to it by human beings except where such orders would conflict with the First Law.</p>
+<button type="button" class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>In the play R.U.R., is it any coincidence that our sympathetic character voicing her concerns as to the sentience of the robots is a woman? The play references many revolutions at the time, and Helena Glory is a parody of many suffragette tropes at the time. “How do you know [the robots] have no soul?” Helena Glory asks. “Why do you manufacture female robots?”
+    “There’s a certain demand for them, you see. Servants, saleswomen, stenographers. People are used to it.” 
+    </p>
+</div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
 </html>
